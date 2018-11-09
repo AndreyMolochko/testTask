@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueBackground">
+    
+    <TextView
+        android:id="@+id/login_text_view_fragment_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/login_text_view_fragment_login"
+        android:background="@drawable/shape_round_corners_sign_up"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <EditText
+            android:id="@+id/email_edit_text_fragment_login"
+            style="@style/styleForEditText"
+            android:hint="@string/email"
+            android:background="@drawable/shape_edit_text_login"
+            android:layout_centerInParent="true"/>
+
+        <EditText
+            android:id="@+id/password_edit_text_fragment_login"
+            style="@style/styleForEditText"
+            android:hint="@string/password"
+            android:background="@drawable/shape_edit_text_login"
+            android:layout_marginTop="8dp"
+            android:inputType="textPassword"
+            android:layout_below="@id/email_edit_text_fragment_login"/>
+
+        <Button
+            android:id="@+id/sign_in_button_fragment_login"
+            style="@style/styleForButton"
+            android:text="@string/login_to_account"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/password_edit_text_fragment_login"/>
+
+        <Button
+            android:id="@+id/sign_up_button_fragment_login"
+            style="@style/styleForButton"
+            android:layout_marginTop="8dp"
+            android:text="@string/registration"
+            android:layout_below="@+id/sign_in_button_fragment_login"/>
+    </RelativeLayout>
+
+</RelativeLayout>

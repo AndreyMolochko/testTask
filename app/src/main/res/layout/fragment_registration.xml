@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueBackground">
+
+    <TextView
+        android:id="@+id/registration_text_view_fragment_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/registration"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/registration_text_view_fragment_registration"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_round_corners_sign_up">
+
+        <EditText
+            android:id="@+id/email_edit_text_fragment_registration"
+            style="@style/styleForEditText"
+            android:layout_above="@+id/password_edit_text_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_edit_text_login"
+            android:hint="@string/email" />
+
+        <EditText
+            android:id="@+id/password_edit_text_fragment_registration"
+            style="@style/styleForEditText"
+            android:layout_above="@+id/name_edit_text_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_edit_text_login"
+            android:inputType="textPassword"
+            android:hint="@string/password" />
+
+        <EditText
+            android:id="@+id/name_edit_text_fragment_registration"
+            style="@style/styleForEditText"
+            android:layout_above="@+id/surname_edit_text_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_edit_text_login"
+            android:hint="Name" />
+
+
+        <EditText
+            android:id="@+id/surname_edit_text_fragment_registration"
+            style="@style/styleForEditText"
+            android:layout_above="@+id/age_edit_text_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_edit_text_login"
+            android:hint="@string/surname" />
+
+        <EditText
+            android:id="@+id/age_edit_text_fragment_registration"
+            style="@style/styleForEditText"
+            android:layout_width="wrap_content"
+            android:layout_above="@id/sign_up_button_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_edit_text_login"
+            android:hint="Age"
+            android:maxLength="3"
+            android:inputType="number"
+            android:paddingEnd="16dp" />
+
+        <TextView
+            android:id="@+id/sex_text_view_fragment_registration"
+            style="@style/styleForTextView"
+            android:layout_below="@id/surname_edit_text_fragment_registration"
+            android:layout_toEndOf="@id/age_edit_text_fragment_registration"
+            android:text="Sex" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@id/sex_text_view_fragment_registration"
+            android:layout_below="@id/surname_edit_text_fragment_registration">
+
+            <RadioButton
+                android:id="@+id/male_radio_button_fragment_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Male"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/female_radio_button_fragment_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Female"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/sign_up_button_fragment_registration"
+            style="@style/styleForButton"
+            android:layout_above="@id/sign_in_button_fragment_registration"
+            android:layout_marginBottom="8dp"
+            android:text="@string/registration" />
+
+        <Button
+            android:id="@+id/sign_in_button_fragment_registration"
+            style="@style/styleForButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/login_to_account" />
+    </RelativeLayout>
+
+</RelativeLayout>

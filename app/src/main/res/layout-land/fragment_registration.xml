@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueBackground">
+
+
+    <EditText
+        android:id="@+id/email_edit_text_fragment_registration"
+        style="@style/styleForEditText"
+        android:layout_width="0dp"
+        android:layout_above="@+id/password_edit_text_fragment_registration"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/name_edit_text_fragment_registration"
+        app:layout_constraintEnd_toStartOf="@+id/password_edit_text_fragment_registration"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password_edit_text_fragment_registration"
+        style="@style/styleForEditText"
+        android:layout_width="0dp"
+        android:layout_above="@+id/name_edit_text_fragment_registration"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/surname_edit_text_fragment_registration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/email_edit_text_fragment_registration" />
+
+    <EditText
+        android:id="@+id/name_edit_text_fragment_registration"
+        style="@style/styleForEditText"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@+id/age_edit_text_fragment_registration"
+        app:layout_constraintEnd_toStartOf="@+id/surname_edit_text_fragment_registration"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/surname_edit_text_fragment_registration"
+        style="@style/styleForEditText"
+        android:layout_width="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="@string/surname"
+        app:layout_constraintBottom_toTopOf="@+id/age_edit_text_fragment_registration"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/name_edit_text_fragment_registration" />
+
+    <EditText
+        android:id="@+id/age_edit_text_fragment_registration"
+        style="@style/styleForEditText"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="Age"
+        android:inputType="number"
+        android:maxLength="3"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button_fragment_registration"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sex_text_view_fragment_registration"
+        style="@style/styleForTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Sex"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button_fragment_registration"
+        app:layout_constraintStart_toEndOf="@+id/age_edit_text_fragment_registration" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_button_fragment_registration"
+        app:layout_constraintStart_toEndOf="@+id/sex_text_view_fragment_registration">
+
+        <RadioButton
+            android:id="@+id/male_radio_button_fragment_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/female_radio_button_fragment_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sign_up_button_fragment_registration"
+        style="@style/styleForButton"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/registration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sign_in_button_fragment_registration" />
+
+    <Button
+        android:id="@+id/sign_in_button_fragment_registration"
+        style="@style/styleForButton"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/login_to_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sign_up_button_fragment_registration"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

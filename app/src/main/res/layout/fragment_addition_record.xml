@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:background="@color/blueBackground">
+
+
+    <EditText
+        android:id="@+id/context_edit_text_fragment_addition_record"
+        style="@style/styleForEditText"
+        android:background="@drawable/shape_edit_text_login"
+        android:hint="@string/write_record_here"
+        android:maxLength="100"/>
+
+    <Button
+        android:id="@+id/add_record_button_fragment_addition_record"
+        style="@style/styleForButton"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_record"
+        android:layout_below="@id/context_edit_text_fragment_addition_record"/>
+</RelativeLayout>

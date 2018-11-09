@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="8dp"
+    android:background="@color/blueBackground">
+
+    <TextView
+        android:id="@+id/context_text_view_item_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        tools:text="It's my testing record. I can see this record on test screen."/>
+
+    <TextView
+        android:id="@+id/date_text_view_item_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:layout_below="@+id/context_text_view_item_recycler"
+        android:layout_alignParentRight="true"
+        tools:text="05.11.2018"
+        />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_clock"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/context_text_view_item_recycler"
+        android:layout_toLeftOf="@+id/date_text_view_item_recycler"/>
+
+</RelativeLayout>
